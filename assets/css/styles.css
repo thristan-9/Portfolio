@@ -1,0 +1,199 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');/*=============== VARIABLES CSS ===============*/
+:root {
+
+    /*========== Colors ==========*/
+
+    --title-color: #fff;
+    --text-color: #fff;
+    --text-color-light: hsl(var(--hue), 4%, 55%);
+    --body-color: #E3E3E3;
+    --container-color: #E3E3E3;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== Margenes Bottom ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+/*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Poppins', sans-serif;
+
+    --big-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 568px) {
+    :root {
+        --big-font-size: 4rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+@media screen and (min-width: 868px) {
+    :root {
+        --big-font-size: 6rem;
+        --h1-font-size: 3rem;
+        --h2-font-size: 2.25rem;
+        --h3-font-size: 1.5rem;
+        --normal-font-size: 1.25rem;
+        --small-font-size: 1rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+@media screen and (min-width: 1168px) {
+    :root {
+        --big-font-size: 7rem;
+        --h1-font-size: 3.5rem;
+        --h2-font-size: 2.75rem;
+        --h3-font-size: 2.25rem;
+        --normal-font-size: 1.5rem;
+        --small-font-size: 1.25rem;
+        --smaller-font-size: .85rem;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    :root {
+        --big-font-size: 8rem;
+        --h1-font-size: 4rem;
+        --h2-font-size: 3.25rem;
+        --h3-font-size: 2.5rem;
+        --normal-font-size: 2rem;
+        --small-font-size: 1.5rem;
+        --smaller-font-size: 1rem;
+    }
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+.container {
+    max-width: 968px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+}
+
+.grid {
+    display: grid;
+}
+
+.main {
+    overflow: hidden;
+    /*For animation*/
+}
+
+.p-left {
+    padding-left: .6vw;
+}
+
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+body {
+    margin: 0;
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*=============== HOME ===============*/
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(140deg, hsla(193, 46%, 25%, 1) 0%, hsla(352, 31%, 63%, 1) 100%);   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__big-fs {
+    line-height: 1.25em;
+    font-size: var(--big-font-size);
+    text-transform: uppercase;
+}
+
+.title-icon {
+    font-size: var(--h2-font-size);
+    color: #E66464;
+}
+
+.home_title__icons {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.home_description {
+    text-align: right;
+    margin-top: 4vh;
+}
+
+
