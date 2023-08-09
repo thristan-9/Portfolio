@@ -104,6 +104,15 @@
 .main {
     overflow: hidden;
     /*For animation*/
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+    height: 100vh;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
 }
 
 .p-left {
@@ -116,9 +125,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-
-html {
     scroll-behavior: smooth;
 }
 
@@ -162,13 +168,22 @@ img {
     height: auto;
 }
 
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+    width: .6rem;
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: .5rem;
+}
+
 
 /*=============== HOME ===============*/
 
 .home {
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(140deg, hsla(193, 46%, 25%, 1) 0%, hsla(352, 31%, 63%, 1) 100%);   
+    background: linear-gradient(140deg, hsla(193, 46%, 25%, 1) 0%, #be838b 100%);   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,7 +197,14 @@ img {
 
 .title-icon {
     font-size: var(--h2-font-size);
-    color: #E66464;
+    color: #cd6e36;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.title-icon:hover {
+    color: #fff;
+    transform: translateY(-.5rem); ;
 }
 
 .home_title__icons {
@@ -193,7 +215,82 @@ img {
 
 .home_description {
     text-align: right;
-    margin-top: 4vh;
+    margin-top: 3vh;
 }
 
+.scroll__span {
+    position: absolute;
+    bottom: 2vh;
+    width: 25px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
 
+.scroll__span::before {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 5px;
+    content: '';
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: sdb10 2s infinite;
+    animation: sdb10 2s infinite;
+    box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb10 {
+    0% {
+        -webkit-transform: translate(0, 0);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: translate(0, 20px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes sdb10 {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*=============== projects ===============*/
+
+.projects {
+    background: linear-gradient(0deg, hsla(201, 62%, 90%, 1) 0%, hsla(7, 57%, 91%, 1) 100%);
+}
