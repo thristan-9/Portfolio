@@ -1,12 +1,11 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');/*=============== VARIABLES CSS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
 :root {
 
     /*========== Colors ==========*/
 
-    --title-color: #fff;
-    --text-color: #fff;
-    --text-color-light: hsl(var(--hue), 4%, 55%);
+    --title-color: #000;
+    --text-color: #000;
     --body-color: #E3E3E3;
     --container-color: #E3E3E3;
 
@@ -14,18 +13,6 @@
     --font-medium: 500;
     --font-semi-bold: 600;
 
-    /*========== Margenes Bottom ==========*/
-    /*.5rem = 8px | 1rem = 16px ...*/
-    --mb-0-5: .5rem;
-    --mb-0-75: .75rem;
-    --mb-1: 1rem;
-    --mb-1-5: 1.5rem;
-    --mb-2: 2rem;
-    --mb-2-5: 2.5rem;
-
-    /*========== z index ==========*/
-    --z-tooltip: 10;
-    --z-fixed: 100;
 
 /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
@@ -33,21 +20,21 @@
 
     --big-font-size: 2.5rem;
     --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
+    --h2-font-size: 1.3rem;
+    --h3-font-size: 1.1rem;
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
 }
 
-/* Responsive typography */
+/* Font Responsive */
 @media screen and (min-width: 568px) {
     :root {
-        --big-font-size: 4rem;
-        --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.25rem;
-        --normal-font-size: 1rem;
+        --big-font-size: 5rem;
+        --h1-font-size: 2.5rem;
+        --h2-font-size: 1.9rem;
+        --h3-font-size: 1.5rem;
+        --normal-font-size: 1.25rem;
         --small-font-size: .875rem;
         --smaller-font-size: .813rem;
     }
@@ -57,8 +44,8 @@
     :root {
         --big-font-size: 6rem;
         --h1-font-size: 3rem;
-        --h2-font-size: 2.25rem;
-        --h3-font-size: 1.5rem;
+        --h2-font-size: 2.4rem;
+        --h3-font-size: 2rem;
         --normal-font-size: 1.25rem;
         --small-font-size: 1rem;
         --smaller-font-size: .813rem;
@@ -70,7 +57,7 @@
         --big-font-size: 7rem;
         --h1-font-size: 3.5rem;
         --h2-font-size: 2.75rem;
-        --h3-font-size: 2.25rem;
+        --h3-font-size: 2rem;
         --normal-font-size: 1.5rem;
         --small-font-size: 1.25rem;
         --smaller-font-size: .85rem;
@@ -82,7 +69,7 @@
         --big-font-size: 8rem;
         --h1-font-size: 4rem;
         --h2-font-size: 3.25rem;
-        --h3-font-size: 2.5rem;
+        --h3-font-size: 2.75rem;
         --normal-font-size: 2rem;
         --small-font-size: 1.5rem;
         --smaller-font-size: 1rem;
@@ -115,8 +102,24 @@ section {
     scroll-snap-align: start;
 }
 
+.ml-1 {
+    margin-left: .5rem;
+}
+
 .p-left {
-    padding-left: .6vw;
+    padding-left: .3em;
+}
+
+.icon {
+    font-size: var(--normal-font-size);
+    color: #000;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.animation__icon:hover {
+    color: #000;
+    transform: translateY(-.5rem);
 }
 
 
@@ -171,7 +174,7 @@ img {
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
     width: .6rem;
-    background: #fff;
+    background: lightgray;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -183,7 +186,15 @@ img {
 /*=============== HOME ===============*/
 
 .home {
-    background: linear-gradient(140deg, hsla(193, 46%, 25%, 1) 0%, #be838b 100%);   
+    background: #fff;/*linear-gradient(180deg, #22505d 0%, #be838b 100%); */
+    /* background-image: url(../img/bg-2.jpeg); */
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home__container {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,15 +207,8 @@ img {
 }
 
 .title-icon {
-    font-size: var(--h2-font-size);
-    color: #cd6e36;
-    transition: .3s;
-    cursor: pointer;
-}
-
-.title-icon:hover {
-    color: #fff;
-    transform: translateY(-.5rem); ;
+    font-size: var(--h3-font-size);
+    color: #000;
 }
 
 .home_title__icons {
@@ -213,13 +217,133 @@ img {
     gap: 2vw;
 }
 
-.home_description {
+.home__description {
     text-align: right;
     margin-top: 3vh;
 }
 
-.scroll__span {
+.home__description-icon-wraper {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.icon__about:hover {
+    color: #000;
+}
+
+
+/*=============== WINDOW ===============*/
+
+.window__bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+.window {
     position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    background-color: #21272FFF;
+    border: solid 0.1rem #6e6e6e4d;
+    box-shadow: 0 1rem 3rem #0000004d;
+    color: #fff;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    z-index: 6;
+}
+
+.window__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #2D343CFF;
+}
+
+.window__button-wraper {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+.window__title {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.window__button {
+    height:  1rem;
+    width: 1rem;
+    margin-right: 0.6rem;
+    background-color: #cacaca;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.window__button-close {background-color: #fc5653;}
+.window__button-expand {background-color: #33c748;}
+.window__button-minimize {background-color: #fdbc40;}
+
+
+.window__body {
+    padding: 3rem 3rem;
+}
+
+.window__description {
+    font-size: var(--small-font-size);
+}
+
+
+/*=============== projects ===============*/
+
+.projects {
+    background: #fff
+
+}
+
+.plantex_img {
+    width: 400px;
+    justify-self: center;
+}
+
+/* BreakPoints */
+
+@media screen and (min-width: 868px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .window {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1168px) {
+   
+}
+
+@media screen and (min-width: 1600px) {
+    
+}
+
+/* Scroll */
+
+.scroll__span {
+    position: fixed;
     bottom: 2vh;
     width: 25px;
     height: 40px;
@@ -287,10 +411,4 @@ img {
     100% {
         opacity: 0;
     }
-}
-
-/*=============== projects ===============*/
-
-.projects {
-    background: linear-gradient(0deg, hsla(201, 62%, 90%, 1) 0%, hsla(7, 57%, 91%, 1) 100%);
 }
