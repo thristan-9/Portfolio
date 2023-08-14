@@ -23,12 +23,12 @@
             <div class="home__container container">
 
                 <div class="home__data">
-                    <h3 class="p-left">
+                    <p class="p-left">
                         Hi 👋 I'm Thristan
-                    </h3>
+                    </p>
                     <div class="home__big-fs">
                         <div class="home_title__icons">
-                            <h1>React</h1>
+                            <h1 class="home__title-color">React</h1>
                             <a href="https://www.linkedin.com/" target="_blank" class="ri-linkedin-box-fill icon animation__icon title-icon"></a>
                             <a href="https://github.com/thristan-9" target="_blank" class="ri-github-fill icon animation__icon title-icon"></a>
                             <a href="assets/doc/ThristanCV.pdf" download="Thristan_CV" target="_blank" class="material-icons-round icon animation__icon title-icon">
@@ -37,17 +37,16 @@
 
                         </div>
 
-                        <h1>Developer</h1>
+                        <h1 class="home__title-color">Developer</h1>
                     </div>
                     <div class="home__description">
                         <p>I Am 20 years old with 5 years of experience</p>
                         <div class="home__description-icon-wraper">
-                            <p>working in a Saas company</p>
-                            <a onclick="windowTrigger()" class="material-icons-round icon icon__about ml-1">
-                                open_in_new
-                            </a>
+                            <p>working in a Saas company.</p>
+                            
                         </div>
                         
+                        <a class="scroll" href="#projects"><span class="scroll__span"></span></a>
                     </div>
                     
                 </div>
@@ -55,29 +54,62 @@
             </div>   
             
         </section>
+    
+        <section class="projects" id="projects">
 
-        <!-- <div class="home__wave">
-            <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
-                style="fill: #be838b; width: 150%; height: 7em;">
-                <path
-                    d="M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 250.45-.39C823.78 31 906.67 72 985.66 92.83c70.05 18.48 146.53 26.09 214.34 3V0H0v27.35a600.21 600.21 0 00321.39 29.09z" />
-            </svg>
-        </div> -->
+            <div class="projects__data">
 
-        <div class="window__bg">
-            <div class="window">
-                <div class="window__header">
-                    <div class="window__button-wraper">
-                        <span onclick="windowTrigger()" class="window__button-close window__button"></span>
-                        <span onclick="windowExpand()" class="window__button-expand window__button"></span>
-                        <span onclick="windowTrigger()" class="window__button-minimize window__button"></span>
+                <h1 class="projects__title">PROJECTS</h1>
+
+                <div class="projects_card-wraper grid">
+                    <div class="projects_card">
+                        <img class="plantex_img" src="assets/img/plantex_img.png">
+                        <h3>Plantex</h3>
+                        <p>
+                            A responsive interface to sell different kinds of plants.
+                            Technologies: HTML, CSS and JavaScript.
+                        </p>                        
                     </div>
 
-                    <p class="window__title">About</p>
+                    <div class="projects_card">
+                        <img class="plantex_img" src="assets/img/plantex_img.png">
+                        <h3>Plantex</h3>
+                        <p>
+                            A responsive interface to sell different kinds of plants.
+                            Technologies: HTML, CSS and JavaScript.
+                        </p>
+                    </div>
+
+                    <div class="projects_card">
+                        <img class="plantex_img" src="assets/img/plantex_img.png">
+                        <h3>Plantex</h3>
+                        <p>
+                            A responsive interface to sell different kinds of plants.
+                            Technologies: HTML, CSS and JavaScript.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="window__body">
-                    <p class="window__description">
+            </div>
+
+        </section>
+
+        <section class="about" id="about">
+        
+            <div class="about__data">
+
+                <div class="about__header">
+                    <div class="about__button-wraper">
+                        <span onclick="windowTrigger()" class="about__button-close about__button"></span>
+                        <span onclick="windowExpand()" class="about__button-expand about__button"></span>
+                        <span onclick="windowTrigger()" class="about__button-minimize about__button"></span>
+                    </div>
+            
+                    <h3 class="about__title">About me</h3>
+                </div>
+            
+                <div class="about__body">
+                    <p class="about__description">
                         My first contact with code was 5 years ago as a intern in a startup called Clinicorp, a Saas company
                         with more than 14.000 users that helps clinics self-manage, in these 5 years I was responsible for many
                         projects
@@ -85,23 +117,9 @@
                         others.
                     </p>
                 </div>
-            </div>
-        </div>
-       
-    
-        <section class="projects" id="projects">
-
-            <div class="projects__container container">
-
-                <div class="projects__data">
-                    
-                    <img class="plantex_img" src="assets/img/plantex_img.png" >
-                </div>
 
             </div>
         </section>
-
-        <a class="scroll" href="#projects"><span class="scroll__span"></span></a> 
 
     </main>
 

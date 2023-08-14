@@ -12,11 +12,19 @@ function windowTrigger() {
     else {
         windowBg.style.display = "none";
         windowWrap.style.transform = "translate(-50%, -50%)";
-        windowWrap.style.width = "20em";
-        windowWrap.style.height = "30em";
+
+        console.log("window.innerWidth", window.innerWidth)
+
+        if (innerWidth >= 868) {
+            windowWrap.style.width = "30em";
+            windowWrap.style.height = "20em";
+        } else {
+            windowWrap.style.width = "20em";
+            windowWrap.style.height = "25em";
+        }
+       
         windowWrap.style.left =  "50%";
         windowWrap.style.top = "50%";
-  
 
     }
 }
