@@ -7,7 +7,6 @@
     --title-color: #101010;
     --text-color: #101010;
     --body-color: #F8F9FA;
-    --container-color: #F8F9FA;
 
     /*========== Font weight ==========*/
     --font-medium: 500;
@@ -80,11 +79,11 @@
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 
-.container {
+/* .container {
     max-width: 968px;
     margin-left: var(--mb-1-5);
     margin-right: var(--mb-1-5);
-}
+} */
 
 .grid {
     display: grid;
@@ -112,7 +111,7 @@ section {
 
 .icon {
     font-size: var(--normal-font-size);
-    color: #F87060;
+    color: #101010;
     transition: .3s;
     cursor: pointer;
 }
@@ -173,22 +172,21 @@ img {
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
     width: .6rem;
-    background: lightgray;
+    background: #fff;
 }
 
 ::-webkit-scrollbar-thumb {
     background: gray;
-    border-radius: .5rem;
+    border-radius: .4rem;
 }
 
 
 /*=============== HOME ===============*/
 
 .home {
-    background-color: #F8F9FA;
     position: relative;
-    color: #101010;
-    height: 90%
+    color: #0a042a;
+    height: 90%;
 }
 
 .home__container {
@@ -202,15 +200,20 @@ img {
     line-height: 1.25em;
     font-size: var(--big-font-size);
     text-transform: uppercase;
+    color: #0a042a;
 }
 
 .home__title-color {
-    color: #101010;
+    color: #0a042a;
 }
 
 .title-icon {
-    font-size: var(--h3-font-size);
-    color: #F87060;
+    font-size: var(--h2-font-size);
+    color: #0066d3;
+}
+
+.github__icon {
+    color: #0a042a
 }
 
 .home_title__icons {
@@ -222,13 +225,69 @@ img {
 .home__description {
     position: relative;
     text-align: right;
-    margin-top: 3vh;
+    margin-top: 1.5rem;
+    color: #0a042a;
 }
 
-.home__description-icon-wraper {
-    display: flex;
-    align-items: center;
-    justify-content: end;
+/*=============== about ===============*/
+
+.about {
+    background: linear-gradient(0deg, #0066d3 0%, #0066d3 100%);
+    /* --mask:
+            radial-gradient(44.72px at 50% 60.00px, #000 99%, #0000 101%) calc(50% - 40px) 0/80px 51% repeat-x,
+            radial-gradient(44.72px at 50% -40px, #0000 99%, #000 101%) 50% 20px/80px calc(51% - 20px) repeat-x,
+            radial-gradient(44.72px at 50% calc(100% - 60.00px), #000 99%, #0000 101%) 50% 100%/80px 51% repeat-x,
+            radial-gradient(44.72px at 50% calc(100% + 40.00px), #0000 99%, #000 101%) calc(50% - 40px) calc(100% - 20px)/80px calc(51% - 20px) repeat-x;
+        -webkit-mask: var(--mask);
+        mask: var(--mask); */
+    transition: .3s;
+    margin-top: -1rem;
+}
+
+.about__data {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 998px;
+    height: auto;
+    overflow: hidden;
+    padding: 2rem 1rem;
+    color: #F8F9FA;
+}
+
+.about__title {
+    color: #F8F9FA;
+}
+
+.about__body {
+    font-size: var(--small-font-size);
+}
+
+.about__description {
+    margin-top: 1.5rem;
+}
+
+.about_expand-wrapper {
+    overflow: hidden;
+    height: 0;
+    transition: .3s;
+}
+
+.accordion-open .about_expand-wrapper {
+    margin-top: 1.5rem;
+}
+
+.accordion-open .expand_more-icon {
+    transform: rotate(180deg);
+}
+
+.expand_more-icon-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.expand_more-icon {
+    color: #F8F9FA;
+    font-size: var(--h3-font-size);
 }
 
 /*=============== projects ===============*/
@@ -239,15 +298,9 @@ img {
 
 .projects__data {
     height: auto;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 1.25rem;
-    padding: 2.5rem 1.5rem;
-    background: #e1e1e1;
+    padding: 1.5rem 1.5rem;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 1rem 3rem #0000004d;
 }
 
 .plantex_img {
@@ -273,69 +326,6 @@ img {
     text-align: left;
 }
 
-/*=============== about ===============*/
-
-.about {
-    background-color: #F8F9FA;
-    color: #101010;
-    height: 60%;
-}
-
-.about__data {
-    margin-top: 5rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 1rem;
-    height: 60%;
-    width: 80%;
-    background-color: #e1e1e1;
-    box-shadow: 0 1rem 3rem #0000004d;
-    color: #101010;
-    overflow: hidden;
-}
-
-.about__header {
-    position: relative;
-    display: flex;
-    align-items: center;
-    background-color: #e1e1e1;
-}
-
-.about__button-wraper {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    padding: 1rem;
-}
-
-.about__title {
-    margin-right: auto;
-    margin-left: auto;
-    color: #101010
-}
-
-.about__button {
-    height:  1rem;
-    width: 1rem;
-    margin-right: 0.6rem;
-    background-color: #cacaca;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.about__button-close {background-color: #fc5653;}
-.about__button-expand {background-color: #33c748;}
-.about__button-minimize {background-color: #fdbc40;}
-
-
-.about__body {
-    padding: 3rem 3rem;
-}
-
-.about__description {
-    font-size: var(--small-font-size);
-}
-
 
 
 /* BreakPoints */
@@ -344,31 +334,31 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .projects {
-        padding-top: 5.5rem;
+    .plantex_img {
+        width: 22rem;
+        justify-self: center;
     }
+
+    /* .about {
+        margin-top: 2.5rem;
+    } */
 }
 
 @media screen and (min-width: 992px) {
-    .container {
-        margin-left: auto;
-        margin-right: auto;
+    .plantex_img {
+        width: 25rem;
+        justify-self: center;
     }
-    
-    .window {
-        width: 30em;
-        height: 20em;
-    }
+
+    /* .about {
+        margin-top: 3.5rem;
+    } */
 }
 
 @media screen and (min-width: 1368px) {
     .projects_card-wraper {
             grid-template-columns: repeat(3, 1fr);
     }
-}
-
-@media screen and (min-width: 1600px) {
-    
 }
 
 /* Scroll */

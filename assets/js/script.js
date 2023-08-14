@@ -1,38 +1,14 @@
 /*=============== WINDOW ===============*/
 
-const windowBg = document.querySelector(".window__bg"),
-windowWrap = document.querySelector(".window"),
-header = document.querySelector(".window__header");
+const aboutBody = document.querySelector(".about__body");
+const aboutExpandWrapper = document.querySelector(".about_expand-wrapper");
 
-function windowTrigger() {
-    const windowDisplay = windowBg.style.display
-    if (!windowDisplay || windowDisplay == "none") {
-        windowBg.style.display = "block";
+function aboutExpandToggle() {
+    if (aboutBody.classList.contains('accordion-open')) {
+        aboutExpandWrapper.removeAttribute('style')
+        aboutBody.classList.remove('accordion-open')
+    } else {
+        aboutExpandWrapper.style.height = aboutExpandWrapper.scrollHeight + 'px'
+        aboutBody.classList.add('accordion-open')
     }
-    else {
-        windowBg.style.display = "none";
-        windowWrap.style.transform = "translate(-50%, -50%)";
-
-        console.log("window.innerWidth", window.innerWidth)
-
-        if (innerWidth >= 868) {
-            windowWrap.style.width = "30em";
-            windowWrap.style.height = "20em";
-        } else {
-            windowWrap.style.width = "20em";
-            windowWrap.style.height = "25em";
-        }
-       
-        windowWrap.style.left =  "50%";
-        windowWrap.style.top = "50%";
-
-    }
-}
-
-function windowExpand() {
-    windowWrap.style.transform = "translate(0%, 0%)";
-    windowWrap.style.width = "100%";
-    windowWrap.style.height = "100%";
-    windowWrap.style.top = 0;
-    windowWrap.style.left = 0;
 }
