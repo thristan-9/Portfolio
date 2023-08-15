@@ -4,8 +4,8 @@
 
     /*========== Colors ==========*/
 
-    --title-color: #101010;
-    --text-color: #101010;
+    --title-color: #0F2027;
+    --text-color: #0F2027;
     --body-color: #F8F9FA;
 
     /*========== Font weight ==========*/
@@ -93,7 +93,7 @@
     overflow: hidden;
     /*For animation*/
     overflow-y: scroll;
-    scroll-snap-type: y proximity;
+    /* scroll-snap-type: y proximity; */
     height: 100vh;
 }
 
@@ -111,7 +111,7 @@ section {
 
 .icon {
     font-size: var(--normal-font-size);
-    color: #101010;
+    color: #0F2027;
     transition: .3s;
     cursor: pointer;
 }
@@ -139,8 +139,11 @@ textarea {
 
 body {
     margin: 0;
-    background-color: var(--body-color);
     color: var(--text-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/dallas-reedy-HbZ2vXaHtas-unsplash.jpg);
+    background-position: 100% 50%;
 }
 
 button {
@@ -185,8 +188,7 @@ img {
 
 .home {
     position: relative;
-    color: #0a042a;
-    height: 90%;
+    height: 100%;    
 }
 
 .home__container {
@@ -194,26 +196,22 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #F8F9FA;
 }
 
 .home__big-fs {
     line-height: 1.25em;
     font-size: var(--big-font-size);
     text-transform: uppercase;
-    color: #0a042a;
 }
 
 .home__title-color {
-    color: #0a042a;
+    color: #F8F9FA;
 }
 
 .title-icon {
     font-size: var(--h2-font-size);
-    color: #0066d3;
-}
-
-.github__icon {
-    color: #0a042a
+    color: #F8F9FA;
 }
 
 .home_title__icons {
@@ -226,31 +224,28 @@ img {
     position: relative;
     text-align: right;
     margin-top: 1.5rem;
-    color: #0a042a;
+    color: #F8F9FA;
+}
+
+.wave__svg {
+    fill: #F8F9FA;
+    width: 150%;
+    height: 142px;
+    transform: rotate(180deg) scaleX(-1);
 }
 
 /*=============== about ===============*/
 
 .about {
-    background: linear-gradient(0deg, #0066d3 0%, #0066d3 100%);
-    /* --mask:
-            radial-gradient(44.72px at 50% 60.00px, #000 99%, #0000 101%) calc(50% - 40px) 0/80px 51% repeat-x,
-            radial-gradient(44.72px at 50% -40px, #0000 99%, #000 101%) 50% 20px/80px calc(51% - 20px) repeat-x,
-            radial-gradient(44.72px at 50% calc(100% - 60.00px), #000 99%, #0000 101%) 50% 100%/80px 51% repeat-x,
-            radial-gradient(44.72px at 50% calc(100% + 40.00px), #0000 99%, #000 101%) calc(50% - 40px) calc(100% - 20px)/80px calc(51% - 20px) repeat-x;
-        -webkit-mask: var(--mask);
-        mask: var(--mask); */
+    background: #343a40;
     transition: .3s;
     margin-top: -1rem;
 }
 
 .about__data {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 998px;
     height: auto;
     overflow: hidden;
-    padding: 2rem 1rem;
+    padding: 10rem 10rem;
     color: #F8F9FA;
 }
 
@@ -293,37 +288,36 @@ img {
 /*=============== projects ===============*/
 
 .projects {
-    padding-top: 3rem;
+    padding-top: 4rem;
+    height: auto;
+    background: #F8F9FA;
+    margin-top: -0.4em;
 }
 
 .projects__data {
-    height: auto;
     padding: 1.5rem 1.5rem;
-    justify-content: center;
-    align-items: center;
 }
 
 .plantex_img {
-    width: 18rem;
+    width: 300px;
     justify-self: center;
 }
 
-.projects__title {
-    margin-bottom: 2.5rem;
-}
-
-.projects__data {
-    text-align: center;
-}
-
 .projects_card-wraper {
-    gap: 2rem;
+    column-gap: 10rem;
+    row-gap: 8rem;
 }
 
 .projects_card {
     display: grid;
     justify-content: center;
     text-align: left;
+}
+
+.card__description {
+    text-align: center;
+    padding-left: 1rem;
+    margin-top: 1rem;
 }
 
 
@@ -335,33 +329,28 @@ img {
     }
 
     .plantex_img {
-        width: 22rem;
-        justify-self: center;
+        width: 400px;
     }
 
-    /* .about {
-        margin-top: 2.5rem;
-    } */
 }
 
 @media screen and (min-width: 992px) {
     .plantex_img {
-        width: 25rem;
-        justify-self: center;
+        width: 580px;
     }
 
-    /* .about {
-        margin-top: 3.5rem;
-    } */
+    .card__description {
+        padding-left: 5.5rem;
+    }
 }
 
 @media screen and (min-width: 1368px) {
-    .projects_card-wraper {
+    /* .projects_card-wraper {
             grid-template-columns: repeat(3, 1fr);
-    }
+    } */
 }
 
-/* Scroll */
+/* Scroll home icon */
 
 .scroll__span {
     position: absolute;
@@ -371,7 +360,7 @@ img {
     height: 40px;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid #101010;
+    border: 2px solid #F8F9FA;
     border-radius: 50px;
     box-sizing: border-box;
 }
@@ -386,7 +375,7 @@ img {
     right: 0;
     top: 5px;
     content: '';
-    background-color: #101010;
+    background-color: #F8F9FA;
     border-radius: 100%;
     -webkit-animation: sdb10 2s infinite;
     animation: sdb10 2s infinite;
