@@ -4,8 +4,8 @@
 
     /*========== Colors ==========*/
 
-    --title-color: #0F2027;
-    --text-color: #0F2027;
+    --title-color: #121212;
+    --text-color: #121212;
     --body-color: #F8F9FA;
 
     /*========== Font weight ==========*/
@@ -111,7 +111,7 @@ section {
 
 .icon {
     font-size: var(--normal-font-size);
-    color: #0F2027;
+    color: #121212;
     transition: .3s;
     cursor: pointer;
 }
@@ -146,10 +146,33 @@ body {
     background-position: 100% 50%;
 }
 
+
 button {
     cursor: pointer;
     border: none;
     outline: none;
+    background: #121212;
+    color: #F8F9FA;
+    border: 2px solid #121212;
+    padding: 8px 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+button i {
+    margin-right: 15px;
+}
+
+button:hover {
+    color: #121212;
+    border: 2px solid #121212;
+    background: #F8F9FA;
+}
+
+button:active {
+    transform: scale(0.95);
 }
 
 h1,
@@ -227,41 +250,97 @@ img {
     color: #F8F9FA;
 }
 
-.wave__svg {
+.wave__svg-top {
     fill: #F8F9FA;
     width: 150%;
     height: 142px;
     transform: rotate(180deg) scaleX(-1);
 }
 
-/*=============== about ===============*/
+/*=============== projects ===============*/
+
+.projects {
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+    height: auto;
+    background: #F8F9FA;
+    margin-top: -0.4em;
+}
+
+.projects__data {
+    padding: 1.5rem 1.5rem;
+}
+
+.project__img {
+    width: 350px;
+    justify-self: center;
+    margin-left: -1rem;
+}
+
+.projects_card-wraper {
+    column-gap: 0rem;
+    row-gap: 6rem;
+}
+
+.projects_card {
+    display: grid;
+    justify-content: center;
+}
+
+.card__description {
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.projects__button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects__button {
+    font-size: var(--small-font-size);
+    border-radius: 5rem;
+    margin: .5rem;
+}
+
+/*=============== ABOUT me ===============*/
 
 .about {
-    background: #343a40;
+    background-color: #121212;
     transition: .3s;
-    margin-top: -1rem;
 }
 
 .about__data {
-    height: auto;
     overflow: hidden;
-    padding: 10rem 10rem;
+    padding: 2rem 2rem;
     color: #F8F9FA;
 }
 
 .about__title {
     color: #F8F9FA;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .about__body {
+    display: flex;
+    justify-content: center;
+}
+
+.about__text-wrapper {
     font-size: var(--small-font-size);
+    max-width: 1100px;
+    width: 100%;
 }
 
 .about__description {
-    margin-top: 1.5rem;
+    text-align: center;
 }
 
 .about_expand-wrapper {
+    text-align: center;
     overflow: hidden;
     height: 0;
     transition: .3s;
@@ -285,69 +364,159 @@ img {
     font-size: var(--h3-font-size);
 }
 
-/*=============== projects ===============*/
+/*=============== CONTACT ===============*/
 
-.projects {
-    padding-top: 4rem;
-    height: auto;
-    background: #F8F9FA;
-    margin-top: -0.4em;
+.contact {
+    background-color: #121212;
+    transition: .3s;
 }
 
-.projects__data {
-    padding: 1.5rem 1.5rem;
+.contact__data {
+    overflow: hidden;
+    padding: 2rem 2rem 3rem 2rem;
+    color: #F8F9FA;
 }
 
-.plantex_img {
-    width: 300px;
-    justify-self: center;
-}
-
-.projects_card-wraper {
-    column-gap: 10rem;
-    row-gap: 8rem;
-}
-
-.projects_card {
-    display: grid;
-    justify-content: center;
-    text-align: left;
-}
-
-.card__description {
+.contact__title {
+    color: #F8F9FA;
+    margin-bottom: 2rem;
     text-align: center;
-    padding-left: 1rem;
-    margin-top: 1rem;
 }
 
+.contact__form {
+    display: flex;
+    justify-content: center;
+}
+
+.contact__group {
+    position: relative;
+    display: grid;
+    row-gap: 1.75rem;
+    max-width: 990px;
+    width: 100%;
+}
+
+.contact__name-email {
+    gap: 1.75rem
+}
+
+.contact__box {
+    position: relative;
+    width: 100%;
+    height: 58px;
+}
+
+.contact__input {
+    outline: none;
+    border: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    border: 3px solid grey;
+    color: #F8F9FA;
+    padding: .5rem 1rem;
+    font-weight: var(--font-medium);
+    transition: border .2s, background-color .2s;
+    font-size: var(--small-font-size);
+}
+
+.contact__input::placeholder {
+    color: grey;
+    transition: opacity .2s;
+}
+
+.contact__input:focus {
+    border: 3px solid #F8F9FA;
+}
+
+.contact__input:-webkit-autofill {
+    transition: background-color 6000s, color 6000s;
+}
+
+.contact__label {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    color: gray;
+    font-weight: var(--font-medium);
+    font-size: var(--small-font-size);
+    background-color: #121212;
+    padding: 8px;
+    pointer-events: none;
+    transition: top .2s, opacity .2s, background-color .2s;
+    opacity: 0;
+}
+
+.contact__area {
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    resize: none;
+}
+
+.contact__input:focus::placeholder {
+    opacity: 0;
+}
+
+.contact__input:focus+.contact__label {
+    opacity: 1;
+    top: -27px;
+}
+
+.contact__message {
+    color: #F8F9FA;
+    font-size: var(--small-font-size);
+    position: absolute;
+    bottom: -1.8rem;
+    left: 0;
+}
+
+.contact__button {
+    background-color: #F8F9FA;
+    border: 2px solid #F8F9FA;
+    color: #121212;
+}
+
+.contact__button:hover {
+    background-color: #121212;
+    border: 2px solid #F8F9FA;
+    color: #F8F9FA;
+}
 
 
 /* BreakPoints */
 @media screen and (min-width: 576px){
-    .projects_card-wraper {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .plantex_img {
-        width: 400px;
+    .project__img {
+        width: 570px;
     }
 
 }
 
 @media screen and (min-width: 992px) {
-    .plantex_img {
-        width: 580px;
+    .project__img {
+        width: 700px;
+        margin-left: 0px;
     }
 
     .card__description {
-        padding-left: 5.5rem;
+        margin-left: 4rem;
+    }
+
+    .contact__name-email {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (min-width: 1368px) {
-    /* .projects_card-wraper {
-            grid-template-columns: repeat(3, 1fr);
-    } */
+    .projects_card-wraper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project__img {
+        width: 700px;
+    }
+
 }
 
 /* Scroll home icon */
