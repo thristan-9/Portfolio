@@ -260,13 +260,6 @@ img {
     color: #F8F9FA;
 }
 
-.wave__svg-top {
-    fill: #F8F9FA;
-    width: 150%;
-    height: 4em;
-    transform: rotate(180deg) scaleX(-1);
-}
-
 /*=============== projects ===============*/
 
 .projects {
@@ -371,6 +364,20 @@ img {
 .expand_more-icon {
     color: #F8F9FA;
     font-size: var(--h3-font-size);
+}
+
+.about__tilt-top {
+    fill: #121212;
+    width: 155%;
+    height: 4rem;
+    transform: rotate(180deg) scaleX(-1);
+}
+
+.about__tilt-bottom {
+    fill: #121212;
+    width: 155%;
+    height: 4rem;
+    transform: scaleX(-1)
 }
 
 /*=============== CONTACT ===============*/
@@ -538,6 +545,10 @@ img {
     .contact__name-email {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .about__tilt-top, .about__tilt-bottom {
+        height: 10rem;
+    }
 }
 
 @media screen and (min-width: 1368px) {
@@ -553,7 +564,7 @@ img {
 
 /* Scroll home icon */
 
-.scroll__span {
+.home__scroll-span {
     position: absolute;
     right: 0;
     bottom: -3.5rem;
@@ -566,7 +577,7 @@ img {
     box-sizing: border-box;
 }
 
-.scroll__span::before {
+.home__scroll-span::before {
     position: absolute;
     width: 6px;
     height: 6px;
