@@ -303,8 +303,8 @@ img {
 
 .projects__button {
     font-size: var(--small-font-size);
-    border-radius: 5rem;
-    margin: .5rem;
+    border-radius: 0.2rem;
+    margin: .7rem;
 }
 
 /*=============== ABOUT me ===============*/
@@ -430,6 +430,7 @@ img {
     height: 100%;
     background-color: #F8F9FA;
     border: 3px solid #5B5B5B;
+    border-radius: 0.2rem;
     color: #121212;
     padding: .5rem 1rem;
     font-weight: var(--font-medium);
@@ -491,6 +492,7 @@ img {
 .contact__button {
     background-color: #121212;
     border: 2px solid #121212;
+    border-radius: 0.2rem;
     color: #F8F9FA;
     max-width: 320px;
     width: 100%;
@@ -508,7 +510,7 @@ img {
     right: 1rem;
     bottom: -50%;
     background-color: #121212;
-    border-radius: 100%;
+    border-radius: 0.2rem;
     display: inline-flex;
     padding: 8px;
     font-size: 1.25rem;
