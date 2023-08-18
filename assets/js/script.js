@@ -13,6 +13,19 @@ function aboutExpandToggle() {
     }
 }
 
+/*=============== show scrollup ===============*/
+
+const scrollup = () => {
+    const scrollup = document.getElementById('scroll-up')
+    console.log("scrollY", this.scrollY)
+    this.scrollY >= 350 ?
+        scrollup.classList.add('show-scroll')
+        :
+        scrollup.classList.remove('show-scroll')
+}
+
+window.addEventListener("scroll", scrollup, false);
+
 
 /*=============== EMail ===============*/
 
@@ -37,3 +50,17 @@ const sendEmail = (e) => {
 }
 
 contactForm.addEventListener('submit', sendEmail);
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 1500,
+    delay: 150,
+    // reset: true
+})
+
+sr.reveal(`.home__data`, { delay: 100 })
+sr.reveal(`.projects__data`, { delay: 350 })
+sr.reveal(`.about__data`, { delay: 350, origin: 'left' })
+sr.reveal(`.contact__data`, { delay: 450, origin: 'right' })

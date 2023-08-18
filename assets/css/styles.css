@@ -1,5 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+
 :root {
 
     /*========== Colors ==========*/
@@ -13,7 +14,7 @@
     --font-semi-bold: 600;
 
 
-/*========== Font and typography ==========*/
+    /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
     --body-font: 'Poppins', sans-serif;
 
@@ -92,9 +93,8 @@
 .main {
     overflow: hidden;
     /*For animation*/
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     /* scroll-snap-type: y proximity; */
-    height: 100vh;
 }
 
 section {
@@ -140,10 +140,7 @@ textarea {
 body {
     margin: 0;
     color: var(--text-color);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../img/dallas-reedy-HbZ2vXaHtas-unsplash.jpg);
-    background-position: 100% 50%;
+    background-color: var(--body-color);
 }
 
 
@@ -211,7 +208,16 @@ img {
 
 .home {
     position: relative;
-    height: 100%;    
+    height: 107vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/dallas-reedy-HbZ2vXaHtas-unsplash.jpg);
+    background-position: 100% 50%;
+    --mask:
+        radial-gradient(4.47rem at 50% calc(100% - 6.00rem), #000 99%, #0000 101%) calc(50% - 4rem) 0/8rem 100%,
+        radial-gradient(4.47rem at 50% calc(100% + 4.00rem), #0000 99%, #000 101%) 50% calc(100% - 2rem)/8rem 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
 }
 
 .home__container {
@@ -220,6 +226,10 @@ img {
     justify-content: center;
     align-items: center;
     color: #F8F9FA;
+}
+
+.home__data {
+    margin-top: -10%;
 }
 
 .home__big-fs {
@@ -253,22 +263,21 @@ img {
 .wave__svg-top {
     fill: #F8F9FA;
     width: 150%;
-    height: 142px;
+    height: 4em;
     transform: rotate(180deg) scaleX(-1);
 }
 
 /*=============== projects ===============*/
 
 .projects {
-    padding-top: 4rem;
-    padding-bottom: 8rem;
+    min-height: 100vh;
     height: auto;
     background: #F8F9FA;
-    margin-top: -0.4em;
+
 }
 
 .projects__data {
-    padding: 1.5rem 1.5rem;
+    padding: 5.5rem 1.5rem 0rem 1.5rem;
 }
 
 .project__img {
@@ -314,7 +323,7 @@ img {
 
 .about__data {
     overflow: hidden;
-    padding: 2rem 2rem;
+    padding: 4rem 2rem 0rem 2rem;
     color: #F8F9FA;
 }
 
@@ -367,18 +376,18 @@ img {
 /*=============== CONTACT ===============*/
 
 .contact {
-    background-color: #121212;
+    background-color: #F8F9FA;
     transition: .3s;
 }
 
 .contact__data {
     overflow: hidden;
     padding: 2rem 2rem 3rem 2rem;
-    color: #F8F9FA;
+    color: #121212;
 }
 
 .contact__title {
-    color: #F8F9FA;
+    color: #121212;
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -412,9 +421,9 @@ img {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #121212;
-    border: 3px solid grey;
-    color: #F8F9FA;
+    background-color: #F8F9FA;
+    border: 3px solid #5B5B5B;
+    color: #121212;
     padding: .5rem 1rem;
     font-weight: var(--font-medium);
     transition: border .2s, background-color .2s;
@@ -422,12 +431,12 @@ img {
 }
 
 .contact__input::placeholder {
-    color: grey;
+    color: #5B5B5B;
     transition: opacity .2s;
 }
 
 .contact__input:focus {
-    border: 3px solid #F8F9FA;
+    border: 3px solid #121212;
 }
 
 .contact__input:-webkit-autofill {
@@ -438,10 +447,10 @@ img {
     position: absolute;
     top: 8px;
     left: 10px;
-    color: gray;
+    color: #121212;
     font-weight: var(--font-medium);
     font-size: var(--small-font-size);
-    background-color: #121212;
+    background-color: #F8F9FA;
     padding: 8px;
     pointer-events: none;
     transition: top .2s, opacity .2s, background-color .2s;
@@ -465,7 +474,7 @@ img {
 }
 
 .contact__message {
-    color: #F8F9FA;
+    color: #121212;
     font-size: var(--small-font-size);
     position: absolute;
     bottom: -1.8rem;
@@ -473,20 +482,43 @@ img {
 }
 
 .contact__button {
-    background-color: #F8F9FA;
-    border: 2px solid #F8F9FA;
-    color: #121212;
+    background-color: #121212;
+    border: 2px solid #121212;
+    color: #F8F9FA;
+    max-width: 320px;
+    width: 100%;
 }
 
 .contact__button:hover {
+    background-color: #F8F9FA;
+    border: 2px solid #121212;
+    color: #121212;
+}
+
+/* scrollup */
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -50%;
     background-color: #121212;
-    border: 2px solid #F8F9FA;
+    border-radius: 100%;
+    display: inline-flex;
+    padding: 8px;
+    font-size: 1.25rem;
+    z-index: 10;
+    transition: .4s;
+}
+
+.scrollup__icon {
     color: #F8F9FA;
 }
 
+.show-scroll {
+    bottom: 2rem;
+}
 
 /* BreakPoints */
-@media screen and (min-width: 576px){
+@media screen and (min-width: 576px) {
     .project__img {
         width: 570px;
     }

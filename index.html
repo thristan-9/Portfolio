@@ -55,14 +55,6 @@
 
         </section>
 
-        <div style="overflow: hidden;">
-            <svg class="wave__svg-top" preserveAspectRatio="none" viewBox="0 0 1200 120"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 250.45-.39C823.78 31 906.67 72 985.66 92.83c70.05 18.48 146.53 26.09 214.34 3V0H0v27.35a600.21 600.21 0 00321.39 29.09z" />
-            </svg>
-        </div>
-
         <section class="projects" id="projects">
 
             <div class="projects__data">
@@ -98,6 +90,13 @@
 
         </section>
 
+        <div style="overflow: hidden; margin-bottom: -1rem;">
+            <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
+                style="fill: #121212; width: 155%; height: 5em; transform: rotate(180deg) scaleX(-1);">
+                <path d="M1200 120L0 16.48V0h1200v120z" />
+            </svg>
+        </div>
+
         <section class="about" id="about">
 
             <div class="about__data">
@@ -114,54 +113,16 @@
                             responsible
                             for many
                             projects
-                            such as recurring billing, automatic financial data import, allow each user create a bank
-                            account and
+                            such as recurring billing, automatic financial data import, a bank account project and
                             others.
                         </p>
-                        
+
                         <div class="about_expand-wrapper">
                             <p>
-                                Ullamco do fugiat fugiat quis amet dolore elit deserunt amet amet pariatur aute esse.
-                                Sint
-                                nostrud laborum dolore
-                                commodo aute eu do consequat excepteur. Deserunt pariatur nulla et est. Proident anim eu
-                                elit dolor officia nulla
-                                minim
-                                ullamco ut eiusmod consequat ullamco. Laboris elit pariatur et exercitation enim
-                                consectetur
-                                excepteur culpa aliqua
-                                sint
-                                tempor magna labore ipsum. Enim pariatur qui exercitation exercitation reprehenderit
-                                fugiat
-                                qui culpa. Nisi Lorem
-                                fugiat
-                                ut ea.
-                        
-                                Ea aliquip sint minim eiusmod mollit veniam cupidatat ea non non esse fugiat est. Quis
-                                minim
-                                et ad duis sit
-                                deserunt.
-                                Enim eu occaecat pariatur et excepteur. Amet culpa fugiat in voluptate culpa enim velit
-                                Lorem. Dolor magna nisi
-                                consectetur ipsum consequat id minim reprehenderit. Est duis eu ut eiusmod aute non
-                                tempor
-                                Lorem commodo sunt tempor
-                                magna enim.
-                        
-                                Ipsum veniam adipisicing incididunt consectetur eu in ut. Aliquip culpa laborum eiusmod
-                                duis
-                                quis Lorem esse
-                                pariatur.
-                                Eu consequat minim eiusmod mollit consequat voluptate. Nulla ullamco est ex veniam anim
-                                cillum cupidatat labore
-                                aliqua
-                                ex. Aliquip deserunt ut tempor consectetur ipsum velit ullamco tempor duis ea quis
-                                mollit.
-                                Culpa laborum magna
-                                exercitation magna reprehenderit non voluptate consectetur est officia enim fugiat.
+                                
                             </p>
                         </div>
-                        
+
                         <div class="expand_more-icon-wrapper">
                             <a onclick="aboutExpandToggle()" class="material-icons-round icon expand_more-icon">
                                 expand_more
@@ -175,26 +136,35 @@
 
         </section>
 
+        <div style="overflow: hidden;">
+            <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
+                style="fill: #121212; width: 155%; height: 5em; transform: scaleX(-1);">
+                <path d="M1200 120L0 16.48V0h1200v120z" />
+            </svg>
+        </div>
+
         <section class="contact" id="contact">
 
             <div class="contact__data">
 
                 <h3 class="contact__title">Send Me a Message</h3>
-            
+
                 <form action="" class="contact__form" id="contact-form">
                     <div class="contact__group">
 
                         <div class="contact__name-email grid">
                             <div class="contact__box">
-                                <input type="text" name="user_name" id="name" class="contact__input" required placeholder="First Name">
+                                <input type="text" name="user_name" id="name" class="contact__input" required
+                                    placeholder="First Name">
                                 <label for="name" class="contact__label">First Name</label>
                             </div>
                             <div class="contact__box">
-                                <input type="text" name="user_email" id="email" class="contact__input" required placeholder="Email Address">
+                                <input type="text" name="user_email" id="email" class="contact__input" required
+                                    placeholder="Email Address">
                                 <label for="email" class="contact__label">Email Address</label>
                             </div>
-                        </div>  
-                        
+                        </div>
+
                         <div class="contact__box">
                             <input type="text" name="user_subject" id="subject" class="contact__input" required
                                 placeholder="Subject">
@@ -205,14 +175,14 @@
                                 placeholder="Message"></textarea>
                             <label for="message" class="contact__label">Message</label>
                         </div>
-            
+
                         <p id="contact-message" class="contact__message"></p>
-            
+
                         <button type="submit" class="button contact__button">
                             <i class="ri-send-plane-fill"></i>
                             Send Message
                         </button>
-            
+
                     </div>
                 </form>
             </div>
@@ -221,8 +191,14 @@
 
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <a href="#" class="scrollup animation__icon" id="scroll-up">
+        <span class="material-icons-round icon scrollup__icon">
+            arrow_upward
+        </span>
+    </a>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="assets/js/scrollreveal.js"></script>
     <script src="assets/js/script.js"></script>
 
 </body>
