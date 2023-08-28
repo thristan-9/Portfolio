@@ -61,6 +61,6 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.home__data`, { delay: 100 })
-sr.reveal(`.projects__data`, { delay: 350 })
-sr.reveal(`.about__data`, { delay: 350, origin: 'left' })
-sr.reveal(`.contact__data`, { delay: 450, origin: 'right' })
+sr.reveal(`.projects__data`, { delay: 250 })
+sr.reveal(`.about__data`, { delay: 250, origin: 'left' })
+sr.reveal(`.contact__data`, { delay: 250, origin: 'right' })

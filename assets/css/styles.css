@@ -208,16 +208,11 @@ img {
 
 .home {
     position: relative;
-    height: 107vh;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../img/dallas-reedy-HbZ2vXaHtas-unsplash.jpg);
     background-position: 100% 50%;
-    --mask:
-        radial-gradient(4.47rem at 50% calc(100% - 6.00rem), #000 99%, #0000 101%) calc(50% - 4rem) 0/8rem 100%,
-        radial-gradient(4.47rem at 50% calc(100% + 4.00rem), #0000 99%, #000 101%) 50% calc(100% - 2rem)/8rem 100% repeat-x;
-    -webkit-mask: var(--mask);
-    mask: var(--mask);
 }
 
 .home__container {
