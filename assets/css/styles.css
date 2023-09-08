@@ -213,6 +213,7 @@ img {
     background-size: cover;
     background-image: url(../img/dallas-reedy-HbZ2vXaHtas-unsplash.jpg);
     background-position: 100% 50%;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.6);
 }
 
 .home__container {
