@@ -120,6 +120,22 @@ section {
     transform: translateY(-.5rem);
 }
 
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
 
 /*=============== BASE ===============*/
 * {
@@ -211,9 +227,9 @@ img {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../img/dallas-reedy-HbZ2vXaHtas-unsplash.jpg);
+    background-image: url(../img/img.jpg);
     background-position: 100% 50%;
-    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .home__container {
@@ -270,9 +286,8 @@ img {
 }
 
 .project__img {
-    width: 350px;
+    width: 100%;
     justify-self: center;
-    margin-left: -1rem;
 }
 
 .projects_card-wraper {
@@ -288,7 +303,6 @@ img {
 .card__description {
     text-align: center;
     margin-top: 1rem;
-    margin-left: 1rem;
 }
 
 .projects__button-wrapper {
@@ -505,7 +519,8 @@ img {
     position: fixed;
     right: 1rem;
     bottom: -50%;
-    background-color: #121212;
+    background-color: #F8F9FA;
+    mix-blend-mode: difference;
     border-radius: 0.2rem;
     display: inline-flex;
     padding: 8px;
@@ -516,6 +531,7 @@ img {
 
 .scrollup__icon {
     color: #F8F9FA;
+    mix-blend-mode: difference;
 }
 
 .show-scroll {
@@ -525,19 +541,15 @@ img {
 /* BreakPoints */
 @media screen and (min-width: 576px) {
     .project__img {
-        width: 570px;
+        width: 90%;
     }
 
 }
 
 @media screen and (min-width: 992px) {
     .project__img {
-        width: 700px;
+        width: 75%;
         margin-left: 0px;
-    }
-
-    .card__description {
-        margin-left: 4rem;
     }
 
     .contact__name-email {
@@ -551,11 +563,11 @@ img {
 
 @media screen and (min-width: 1368px) {
     .projects_card-wraper {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .project__img {
-        width: 700px;
+        width: 65vw;
     }
 
 }
