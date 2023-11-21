@@ -65,7 +65,7 @@
     }
 }
 
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1668px) {
     :root {
         --big-font-size: 7rem;
         --h1-font-size: 4rem;
@@ -212,6 +212,7 @@ img {
 ::-webkit-scrollbar {
     width: .6rem;
     background: #fff;
+    display: none;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -241,7 +242,7 @@ img {
 }
 
 .home__data {
-    margin-top: -10%;
+    margin-top: -40%;
 }
 
 .home__big-fs {
@@ -281,8 +282,13 @@ img {
 
 }
 
+.projects__title {
+    font-size: var(--h2-font-size);
+}
+
 .projects__data {
-    padding: 5.5rem 1.5rem 0rem 1.5rem;
+    text-align: center;
+    padding: 6rem 1.5rem 10rem 1.5rem;
 }
 
 .project__img {
@@ -291,6 +297,7 @@ img {
 }
 
 .projects_card-wraper {
+    margin-top: 6rem;
     column-gap: 0rem;
     row-gap: 6rem;
 }
@@ -302,7 +309,7 @@ img {
 
 .card__description {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .projects__button-wrapper {
@@ -322,11 +329,19 @@ img {
 .about {
     background-color: #121212;
     transition: .3s;
+    padding: 2rem;
+    width: 100%;
+    border-radius: 0.2rem;
+    margin: auto;
 }
 
 .about__data {
     overflow: hidden;
-    padding: 4rem 2rem 0rem 2rem;
+    padding: 4rem 2rem 2rem 2rem;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.13) 1px, transparent 1px);
+    background-position: 50% 50%;
+    background-size: 1.1rem 1.1rem;
+    border-radius: 4rem;
     color: #F8F9FA;
 }
 
@@ -395,6 +410,7 @@ img {
 .contact {
     background-color: #F8F9FA;
     transition: .3s;
+    margin-top: 3rem;
 }
 
 .contact__data {
@@ -547,6 +563,10 @@ img {
 }
 
 @media screen and (min-width: 992px) {
+    .home__data {
+        margin-top: -10%;
+    }
+
     .project__img {
         width: 75%;
         margin-left: 0px;
@@ -556,18 +576,19 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .about__tilt-top, .about__tilt-bottom {
+    .about__tilt-top,
+    .about__tilt-bottom {
         height: 10rem;
     }
 }
 
 @media screen and (min-width: 1368px) {
     .projects_card-wraper {
-        grid-template-columns: 1fr;
+        row-gap: 10rem;
     }
 
     .project__img {
-        width: 65vw;
+        width: 65%;
     }
 
 }
