@@ -279,7 +279,7 @@ img {
     min-height: 100vh;
     height: auto;
     background: #F8F9FA;
-
+    text-align: center;
 }
 
 .projects__title {
@@ -287,7 +287,6 @@ img {
 }
 
 .projects__data {
-    text-align: center;
     padding: 6rem 1.5rem 10rem 1.5rem;
 }
 
