@@ -17,7 +17,6 @@ function aboutExpandToggle() {
 
 const scrollup = () => {
     const scrollup = document.getElementById('scroll-up')
-    console.log("scrollY", this.scrollY)
     this.scrollY >= 350 ?
         scrollup.classList.add('show-scroll')
         :
