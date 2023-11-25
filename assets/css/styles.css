@@ -318,7 +318,7 @@ img {
 }
 
 .projects__title {
-    font-size: var(--h2-font-size);
+    font-size: var(--h3-font-size);
     text-align: center;
 }
 
@@ -466,16 +466,15 @@ img {
 }
 
 .about__data {
+    margin: auto;
     margin-top: 2rem;
     overflow: hidden;
     background-position: 50% 50%;
     background-size: 1.1rem 1.1rem;
     color: var(--light-color);
     display: grid;
-    grid-template-columns: 2fr 1fr;
     gap: 2rem;
     width: 100%;
-    margin: auto;
 }
 
 .about__title {
@@ -485,7 +484,7 @@ img {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: var(--h2-font-size);
+    font-size: var(--h3-font-size);
 }
 
 .about__description_wrapper,
@@ -507,6 +506,7 @@ img {
 
 .about__img {
     border-radius: 50%;
+    width: 100%;
     max-width: 450px;
     filter: grayscale();
     transition: .7s;
@@ -653,7 +653,7 @@ img {
     border-radius: 0.2rem;
     color: var(--light-color);
     max-width: 320px;
-    width: 100%;
+    width: fit-content;
 }
 
 .contact__button:hover {
@@ -711,17 +711,22 @@ img {
         margin-top: 6rem;
     }
 
+    .projects_card {
+        width: 85%;
+    }
+
     .projects__data {
         padding: 6rem 1.5rem 10rem 1.5rem;
     }
 
     .about {
-        padding: 5rem 5rem 10rem 5rem;
+        padding: 4rem 4rem 10rem 4rem;
     }
 
     .about__data {
         margin-top: 5rem;
-        width: 80%;
+        width: 100%;
+        grid-template-columns: 4fr 1fr;
     }
 
     .about__body {
@@ -729,20 +734,38 @@ img {
     }
 
     .about__description_wrapper {
-        padding: 3rem;
+        padding: 2rem;
+    }
+
+    .about__description_title {
+        font-size: var(--small-font-size);
+    }
+
+    .about__description {
+        font-size: var(--smaller-font-size);
+        text-wrap: none;
     }
 
 }
 
-@media screen and (min-width: 1768px) {
-    .projects_card {
-        width: 85%;
-    }
-
+@media screen and (min-width: 1568px) {
     .card__info {
         padding: 2rem;
     }
 
+    .about__description_title {
+        font-size: var(--normal-font-size);
+    }
+
+    .about__description {
+        font-size: var(--small-font-size);
+    }
+
+    .about__data {
+        width: 90%;
+        grid-template-columns: 3fr 1fr;
+    }
+  
 }
 
 /* Scroll home icon */
