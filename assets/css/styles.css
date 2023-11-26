@@ -341,7 +341,7 @@ img {
     border-bottom: none;
     border-radius: 25px;
     overflow: hidden;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     background: var(--dark-color);
 }
 
@@ -394,9 +394,9 @@ img {
 .projects__button-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: .7rem;
-    margin-top: .7rem;
+    justify-content: right;
+    gap: 1rem;
+    margin-top: 2rem;
     z-index: 10;
 }
 
@@ -448,8 +448,6 @@ img {
     padding: .5rem;
     background-color: var(--light-color);
     border-radius: 9999px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     transition: .3s;
     cursor: pointer;
     display: flex;
@@ -467,7 +465,6 @@ img {
     width: 100%;
     border-radius: 25px;
     margin: auto;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     border: 0.1rem solid rgba(255, 255, 255, .5);
     border-bottom: none;
     text-align: center;
