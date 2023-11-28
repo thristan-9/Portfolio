@@ -71,9 +71,9 @@
         --h1-font-size: 4rem;
         --h2-font-size: 3rem;
         --h3-font-size: 2.5rem;
-        --normal-font-size: 1.5rem;
-        --small-font-size: 1.25rem;
-        --smaller-font-size: 1rem;
+        --normal-font-size: 1.35rem;
+        --small-font-size: 1.1rem;
+        --smaller-font-size: .9rem;
     }
 }
 
@@ -537,7 +537,6 @@ img {
     position: relative;
     z-index: 10;
     font-size: var(--small-font-size);
-    text-wrap: balance;
     display: block;
 }
 
@@ -748,7 +747,7 @@ img {
 
     .about__description {
         font-size: var(--smaller-font-size);
-        text-wrap: none;
+        text-wrap: initial;
     }
 
 }
