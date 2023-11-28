@@ -352,6 +352,10 @@ img {
     z-index: 10;
 }
 
+.opacity__text {
+    opacity: .7;
+}
+
 .project__view {
     width: 100%;
     height: auto;
