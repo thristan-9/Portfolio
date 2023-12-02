@@ -71,7 +71,7 @@
         --h1-font-size: 4rem;
         --h2-font-size: 3rem;
         --h3-font-size: 2.5rem;
-        --normal-font-size: 1.35rem;
+        --normal-font-size: 1.4rem;
         --small-font-size: 1.1rem;
         --smaller-font-size: .9rem;
     }
@@ -115,6 +115,10 @@ section {
 
 .mt-2 {
     margin-top: 2rem;
+}
+
+.mt-3{
+    margin-top: 3rem;
 }
 
 .icon {
@@ -516,7 +520,7 @@ img {
 .about__img {
     border-radius: 50%;
     width: 100%;
-    max-width: 450px;
+    max-width: 350px;
     filter: grayscale();
     transition: .7s;
 }
@@ -543,6 +547,7 @@ img {
 .about__description_title {
     font-size: var(--normal-font-size);
 }
+
 
 /*=============== CONTACT ===============*/
 
@@ -741,28 +746,25 @@ img {
         padding: 2rem;
     }
 
-    .about__description_title {
+    .about__description {
         font-size: var(--small-font-size);
+        text-wrap: initial;
     }
 
-    .about__description {
+    .about__technologies {
         font-size: var(--smaller-font-size);
-        text-wrap: initial;
     }
 
 }
 
-@media screen and (min-width: 1568px) {
+@media screen and (min-width: 1468px) {
+
     .card__info {
         padding: 2rem;
     }
 
-    .about__description_title {
-        font-size: var(--normal-font-size);
-    }
-
-    .about__description {
-        font-size: var(--small-font-size);
+    .about__description_wrapper {
+        padding: 3rem;
     }
 
     .about__data {
