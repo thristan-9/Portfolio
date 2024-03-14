@@ -521,15 +521,15 @@ img {
     border-radius: 50%;
     width: 100%;
     max-width: 350px;
-    filter: grayscale();
+    /* filter: grayscale(); */
     transition: .7s;
 }
 
-.about__image_wrapper:hover {
+/* .about__image_wrapper:hover {
     .about__img {
         filter: none;
     }
-}
+} */
 
 .about__introduction {
     display: grid;
